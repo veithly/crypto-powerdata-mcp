@@ -122,7 +122,7 @@ graph TB
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/crypto-powerdata-mcp.git
+git clone https://github.com/veithly/crypto-powerdata-mcp.git
 cd crypto-powerdata-mcp
 
 # Install dependencies using UV
@@ -217,7 +217,7 @@ The service automatically installs the following key dependencies:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Clone and install
-git clone https://github.com/your-username/crypto-powerdata-mcp.git
+git clone https://github.com/veithly/crypto-powerdata-mcp.git
 cd crypto-powerdata-mcp
 uv sync
 ```
@@ -225,7 +225,7 @@ uv sync
 #### Method 2: Using pip
 
 ```bash
-git clone https://github.com/your-username/crypto-powerdata-mcp.git
+git clone https://github.com/veithly/crypto-powerdata-mcp.git
 cd crypto-powerdata-mcp
 pip install -e .
 ```
@@ -233,7 +233,7 @@ pip install -e .
 #### Method 3: Development Installation
 
 ```bash
-git clone https://github.com/your-username/crypto-powerdata-mcp.git
+git clone https://github.com/veithly/crypto-powerdata-mcp.git
 cd crypto-powerdata-mcp
 uv sync --dev  # Includes development dependencies
 ```
@@ -644,7 +644,7 @@ crypto-powerdata-mcp/
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/crypto-powerdata-mcp.git
+git clone https://github.com/veithly/crypto-powerdata-mcp.git
 cd crypto-powerdata-mcp
 
 # Install development dependencies
@@ -845,7 +845,7 @@ We welcome contributions to the Crypto PowerData MCP service! Here's how you can
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/your-username/crypto-powerdata-mcp.git
+   git clone https://github.com/veithly/crypto-powerdata-mcp.git
    cd crypto-powerdata-mcp
    ```
 
@@ -971,8 +971,8 @@ Special thanks to the following projects and communities:
 ## 📞 Support
 
 - **Documentation**: [API Documentation](API_DOCUMENTATION.md) | [Configuration Guide](CONFIGURATION.md)
-- **Issues**: [GitHub Issues](https://github.com/your-username/crypto-powerdata-mcp/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/crypto-powerdata-mcp/discussions)
+- **Issues**: [GitHub Issues](https://github.com/veithly/crypto-powerdata-mcp/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/veithly/crypto-powerdata-mcp/discussions)
 - **Email**: dev@example.com
 
 ---
