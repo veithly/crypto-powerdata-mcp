@@ -1,0 +1,43 @@
+name: Validate Dependencies
+
+on:
+  workflow_dispatch:  # Allow manual triggering
+  schedule:
+    - cron: '0 6 * * 1'  # Run weekly on Monday at 6 AM UTC
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libta-lib0-dev
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+
+    - name: Set up Python
+      run: uv python install 3.11
+
+    - name: Install dependencies
+      run: uv sync
+
+    - name: Validate critical imports
+      run: |
+        uv run python -c "
+        import talib
+        import ccxt
+        import pandas
+        import numpy
+        print('✅ All critical dependencies imported successfully')
+        print(f'TA-Lib version: {talib.__version__}')
+        print(f'CCXT version: {ccxt.__version__}')
+        print(f'Pandas version: {pandas.__version__}')
+        print(f'NumPy version: {numpy.__version__}')
+        "
