@@ -6,13 +6,47 @@
 
 > **A comprehensive MCP (Model Context Protocol) service for cryptocurrency data acquisition with advanced technical analysis capabilities**
 
+## 🚀 Quick Start with uvx (Recommended)
+
+**No installation required!** Run directly with uvx:
+
+```bash
+# Run MCP server for Claude Desktop/MCP Studio
+uvx crypto-powerdata-mcp
+
+# Run HTTP server for web access
+uvx crypto-powerdata-mcp --http
+
+# Run with OKX API credentials
+uvx crypto-powerdata-mcp --env OKX_API_KEY=your_key --env OKX_SECRET_KEY=your_secret
+```
+
+**Claude Desktop Configuration:**
+```json
+{
+  "mcpServers": {
+    "crypto-powerdata": {
+      "command": "uvx",
+      "args": ["crypto-powerdata-mcp"],
+      "env": {
+        "OKX_PROJECT_ID": "your_okx_project_id",
+        "OKX_API_KEY": "your_okx_api_key",
+        "OKX_SECRET_KEY": "your_okx_secret_key",
+        "OKX_PASSPHRASE": "your_okx_passphrase"
+      }
+    }
+  }
+}
+```
+
+📖 **[See QUICK_START.md for complete uvx usage guide](QUICK_START.md)**
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
 - [Architecture](#architecture)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
+- [Installation Methods](#installation-methods)
 - [Configuration](#configuration)
 - [Usage Examples](#usage-examples)
 - [API Documentation](#api-documentation)
@@ -210,7 +244,29 @@ The service automatically installs the following key dependencies:
 
 ### Installation Methods
 
-#### Method 1: Using UV (Recommended)
+#### Method 1: Direct Usage with uvx (Recommended) ⭐
+
+**No installation required!** Run directly without cloning:
+
+```bash
+# Run MCP server (stdio mode for Claude Desktop)
+uvx crypto-powerdata-mcp
+
+# Run HTTP server for web access
+uvx crypto-powerdata-mcp --http
+
+# Run with environment variables
+uvx crypto-powerdata-mcp --env OKX_API_KEY=your_key --env OKX_SECRET_KEY=your_secret
+```
+
+**Advantages:**
+- ✅ No repository cloning needed
+- ✅ No dependency management
+- ✅ Always uses latest published version
+- ✅ Automatic isolation
+- ✅ Works across different environments
+
+#### Method 2: Local Development Installation
 
 ```bash
 # Install UV if not already installed
@@ -222,7 +278,7 @@ cd crypto-powerdata-mcp
 uv sync
 ```
 
-#### Method 2: Using pip
+#### Method 3: Using pip
 
 ```bash
 git clone https://github.com/veithly/crypto-powerdata-mcp.git
@@ -230,7 +286,7 @@ cd crypto-powerdata-mcp
 pip install -e .
 ```
 
-#### Method 3: Development Installation
+#### Method 4: Development Installation with Testing
 
 ```bash
 git clone https://github.com/veithly/crypto-powerdata-mcp.git

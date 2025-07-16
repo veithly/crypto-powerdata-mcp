@@ -8,6 +8,7 @@ authors = [
     {name = "Crypto PowerData MCP", email = "dev@example.com"}
 ]
 keywords = ["mcp", "cryptocurrency", "trading", "technical-analysis", "okx", "ccxt"]
+license = {text = "MIT"}
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -16,7 +17,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+
 dependencies = [
     "mcp>=1.0.0",
     "ccxt>=4.0.0",
@@ -33,6 +37,11 @@ dependencies = [
     "starlette>=0.27.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/veithly/crypto-powerdata-mcp"
+Repository = "https://github.com/veithly/crypto-powerdata-mcp"
+Issues = "https://github.com/veithly/crypto-powerdata-mcp/issues"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
@@ -45,7 +54,7 @@ dev = [
 ]
 
 [project.scripts]
-crypto-powerdata-mcp = "src.main:main"
+crypto-powerdata-mcp = "src.cli:main"
 
 [build-system]
 requires = ["hatchling"]

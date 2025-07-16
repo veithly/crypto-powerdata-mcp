@@ -1,0 +1,41 @@
+# Include documentation files
+include README.md
+include README-zh.md
+include LICENSE
+include CHANGELOG.md
+include API_DOCUMENTATION.md
+include CONFIGURATION.md
+include TESTING_REPORT.md
+
+# Include configuration examples
+include claude_desktop_config.json
+include mcp_studio_config.json
+include config_examples.py
+
+# Include source code
+recursive-include src *.py
+
+# Exclude development and test files
+exclude test_*.py
+exclude comprehensive_mcp_test.py
+exclude test_mcp_client_comprehensive.py
+exclude test_mcp_functionality.py
+exclude test_mcp_service.py
+exclude test_enhanced_mcp.py
+
+# Exclude build artifacts
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# Exclude development files
+exclude .gitignore
+exclude .env*
+exclude uv.lock
+exclude PROPOSAL.md
+recursive-exclude scripts *
